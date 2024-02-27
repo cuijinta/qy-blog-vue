@@ -12,11 +12,11 @@
           alt=""
         />
         <h1 v-if="this.$store.state.themeObj.user_start != 0">
-          <span>请别再呼唤我为孤独之人</span>
+          <span>立志成为优秀的java后端工程师</span>
         </h1>
       </div>
       <div class="r1-body">
-        <p>三更</p>
+        <p>浅夜</p>
         <div class="catch-me">
           <div class="">
             <el-tooltip class="item" content="Github" placement="top">
@@ -27,16 +27,6 @@
             <el-tooltip class="item" effect="dark" content="QQ" placement="top">
               <a :href="catchMeObj.qq" target="_blank"
                 ><i class="fa fa-fw fa-qq"></i
-              ></a>
-            </el-tooltip>
-            <el-tooltip
-              class="item"
-              effect="dark"
-              content="微博"
-              placement="top"
-            >
-              <a :href="catchMeObj.sina" target="_blank"
-                ><i class="fa fa-fw fa-weibo"></i
               ></a>
             </el-tooltip>
           </div>
@@ -84,7 +74,7 @@
         :src="
           this.$store.state.themeObj.right_img
             ? this.$store.state.themeObj.right_img
-            : 'static/img/scroll.png'
+            : 'static/img/long.png'
         "
         alt=""
       />
@@ -121,11 +111,10 @@ export default {
       artCommentList: "", //最新评论
       catchMeObj: {
         //个人信息
-        git: "https://gitee.com",
+        git: "https://github.com/cuijinta",
         qq: "/static/img/qq.png",
-        sina: "https://weibo.com",
         wechat: "/static/img/qq.jpg",
-        csdn: "http://www.csdn.cn",
+        csdn: "https://blog.csdn.net/qq_59440169",
         job: "https://www.baidu.com",
       },
     };
