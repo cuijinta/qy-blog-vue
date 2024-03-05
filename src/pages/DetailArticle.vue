@@ -8,9 +8,9 @@
                     <sg-articleDetail></sg-articleDetail>
                     <sg-message></sg-message>
                 </el-col>
-                <el-col :sm="24"  :md="8" >
-                    <sg-rightlist></sg-rightlist>
-                </el-col>
+<!--                <el-col :sm="24"  :md="8" >-->
+<!--                    <sg-rightlist></sg-rightlist>-->
+<!--                </el-col>-->
             </el-row>
         </div>
     </div>

@@ -112,7 +112,7 @@ export default {
       catchMeObj: {
         //个人信息
         git: "https://github.com/cuijinta",
-        qq: "/static/img/qq.png",
+        qq: "/static/img/qq.jpg",
         wechat: "/static/img/qq.jpg",
         csdn: "https://blog.csdn.net/qq_59440169",
         job: "https://www.baidu.com",
