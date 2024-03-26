@@ -206,7 +206,7 @@
                     //加载更多
                     this.commentList = this.commentList.concat(msg);
                 }
-                
+
                 this.hasMore = result.total>this.commentList.length
               },
           //选择表情包
@@ -304,7 +304,7 @@
               }
 
               //公用设置数据方法
-              
+
               if(that.$route.name=='DetailArticle'){//文章列表的评论
                   that.type = 0;
                   getArticleComment(that.queryParams).then((response)=>{
@@ -320,8 +320,17 @@
               }
           },
           addMoreFun:function(){//查看更多
+           // console.log(document.body.scrollHeight-document.body.clientHeight)
+           //  console.log(document.body.scrollTop)
+           //  if ( document.body.scrollHeight -  document.body.clientHeight < document.body.scrollTop) {
+           //    console.log('++')
+              // 滚动到底部时加载更多数据
               this.queryParams.pageNum++
               this.showCommentList(false);
+
+
+            // }
+
           },
           routeChange:function(){//重新加载
               var that = this;
@@ -342,7 +351,7 @@
             that.routeChange();
         },
         mounted(){//页面加载完成后
-
+     // window.addEventListener('scroll',this.addMoreFun)
         }
     }
 </script>

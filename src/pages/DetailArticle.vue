@@ -1,10 +1,10 @@
 <!-- 文章详情 -->
 <template>
     <div>
-        <sg-nav></sg-nav>
-        <div  class="container" id="detail">
-            <el-row  :gutter="30">
-                <el-col :sm="24" :md="16" style="transition:all .5s ease-out;margin-bottom:30px;">
+<!--        <sg-nav></sg-nav>-->
+        <div  class="container2" id="detail">
+            <el-row  :gutter="60">
+                <el-col :sm="24" :md="100" style="transition:all .5s ease-out;margin-bottom:30px;">
                     <sg-articleDetail></sg-articleDetail>
                     <sg-message></sg-message>
                 </el-col>
@@ -54,4 +54,12 @@ import message from '../components/message.vue'
 </script>
 
 <style>
+.container2{
+  width: 70%!important;
+  //margin:0 auto;
+  margin-top: 20px;
+  position: absolute ;
+  left: 50%;
+  transform: translate(-50%);
+}
 </style>

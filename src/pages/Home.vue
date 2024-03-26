@@ -1,7 +1,7 @@
 <!-- 首页 -->
 <template>
   <div :style="{backgroundImage:'url(https://xpoet.cn/images/bg.svg)'}">
-    <sg-navbar></sg-navbar>
+    <sg-navbar ></sg-navbar>
     <div class="container">
       <el-row :gutter="30">
         <el-col :sm="24" :md="16" style="transition:all .5s ease-out;margin-bottom:30px;">
@@ -22,11 +22,25 @@ import rightlist from '../components/rightlist.vue'
 
 export default {
   name: 'Home',
+
+
+
   data() { //选项 / 数据
-    return {}
+    return {
+      state:true,
+    }
   },
   methods: { //事件处理器
 
+  },
+  beforeRouteLeave (to, from, next) {
+    if(to.fullPath.indexOf('=')!=-1){
+      this.state=false
+    }
+    console.log(to.fullPath)
+    next()
+    // 导航离开该组件的对应路由时调用
+    // 可以访问组件实例 `this`
   },
   components: { //定义组件
     'sg-navbar': header,
@@ -34,6 +48,10 @@ export default {
     'sg-rightlist': rightlist,
   },
   created() { //生命周期函数
+
+  },
+  mounted() {
+
 
   }
 }
