@@ -15,9 +15,8 @@
                               :index="'/Share?classId='+item.id">{{ item.name }}
                 </el-menu-item>
               </el-submenu>
+              <el-menu-item index="/Friendslink"><i class="fa fa-wa fa-users"></i>网址导航</el-menu-item>
               <el-menu-item index="/Reward"><i class="fa fa-wa fa-cny"></i> 赞赏</el-menu-item>
-              <el-menu-item index="/Friendslink"><i class="fa fa-wa fa-users"></i>友链</el-menu-item>
-
               <div class="userInfo">
                 <div v-show="!haslogin" class="nologin">
                   <a href="javascript:void(0);" @click="logoinFun(1)">登录&nbsp;</a>|<a href="javascript:void(0);"
@@ -53,7 +52,7 @@
           :src="userInfo?userInfo.avatar:'static/img/tou.png'"
           alt="">
         <h2 class="h-description">
-          {{ userInfo ? userInfo.nickName : '会当凌绝顶 一览众山小'}}
+          {{ userInfo ? userInfo.nickName : '会当凌绝顶 一览众山小' }}
         </h2>
       </div>
     </div>

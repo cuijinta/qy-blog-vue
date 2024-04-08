@@ -1,7 +1,7 @@
 <!-- 首页 -->
 <template>
   <div :style="{backgroundImage:'url(https://xpoet.cn/images/bg.svg)'}">
-    <sg-navbar ></sg-navbar>
+    <sg-navbar></sg-navbar>
     <div class="container">
       <el-row :gutter="30">
         <el-col :sm="24" :md="16" style="transition:all .5s ease-out;margin-bottom:30px;">
@@ -11,6 +11,10 @@
           <sg-rightlist></sg-rightlist>
         </el-col>
       </el-row>
+      <div class="beian">
+        <a href="https://beian.miit.gov.cn/" target="_blank">陇 ICP备 2024007257号-1</a>
+      </div>
+
     </div>
   </div>
 </template>
@@ -24,25 +28,25 @@ export default {
   name: 'Home',
 
 
-
   data() { //选项 / 数据
     return {
-      state:true,
+      state: true,
     }
   },
   methods: { //事件处理器
 
   },
-  beforeRouteLeave (to, from, next) {
-    if(to.fullPath.indexOf('=')!=-1){
-      this.state=false
+  beforeRouteLeave(to, from, next) {
+    if (to.fullPath.indexOf('=') != -1) {
+      this.state = false
     }
     console.log(to.fullPath)
     next()
     // 导航离开该组件的对应路由时调用
     // 可以访问组件实例 `this`
   },
-  components: { //定义组件
+  components: {
+//定义组件
     'sg-navbar': header,
     'sg-articlelist': articlelist,
     'sg-rightlist': rightlist,
@@ -76,4 +80,15 @@ export default {
   transition: color 0.2s ease;
 }
 
+.beian {
+  color: #666;
+  font-size: 20px;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.beian a {
+  color: #beb6b6;
+  text-decoration: none;
+}
 </style>

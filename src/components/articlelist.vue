@@ -18,13 +18,13 @@
       <h2 class="ddy">
         <i class="fa fa-fw fa-user"></i>发表于
         <i class="fa fa-fw fa-clock-o"></i><span v-html="showInitDate(item.createTime,'all')">{{showInitDate(item.createTime,'all')}}</span> •
-        <i class="fa fa-fw fa-eye"></i>{{item.viewCount}} 次围观 •
+        <i class="fa fa-fw fa-eye"></i> {{item.viewCount}} 次围观 •
       </h2>
       <div class="article-content1">
      <a  class='imgs' :href="'#/DetailArticle?aid='+item.id" >
        <p  style="overflow:hidden;text-align:center;" class="img" >
-<!--          <img :src="item.thumbnail" alt="" class="maxW">-->
-          <img :src="require('@/assets/logo.png')"  alt=""/>
+          <img :src="item.thumbnail" alt=""/>
+<!--          <img :src="require('@/assets/logo.png')"  alt=""/>-->
 
         </p>
      </a>
@@ -34,7 +34,7 @@
               {{item.title}}
             </a>
           </h3>
-          {{item.summary}}ewwwwwddddddddddddddddddddddeewwwwwdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddewwwwwdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddwwwwwdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+          {{item.summary}}
         </div>
       </div>
 
